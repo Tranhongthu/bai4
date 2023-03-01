@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Viết được chương trình Javascript tính điểm trung bình.
+    <script>
+        function tinhDiemTrungBinhVaDanhGia(arr) {
+        const diemTrungBinh = arr.reduce((total, current) => total + current, 0) / arr.length;
+        let grade;
+        if (diemTrungBinh >= 91) {
+            grade = 'A';
+        } else if (diemTrungBinh >= 81) {
+            grade = 'B';
+        } else if (diemTrungBinh >= 71) {
+            grade = 'C';
+        } else {
+            grade = 'D';
+        }
+        return `Điểm trung bình: ${diemTrungBinh} 
+        - grade: ${grade}`;
+    }
+        const diem = [80, 90, 75, 85, 95];
+        console.log(tinhDiemTrungBinhVaDanhGia(diem));
+    </script>
+</body>
+</html>
