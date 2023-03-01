@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Viết hàm trả về giá trị true nếu mảng thứ nhất nằm trong mảng thứ hai,  nếu không sẽ trả về giá trị false.Điều kiện tính mảng 1 nằm trong mảng 2:
+        Số nhỏ nhất trong mảng 1 lớn hơn số nhỏ nhất trong mảng 2 Số lớn nhất trong mảng 1 nhỏ hơn số lớn nhất trong mảng 2</h2>
+    <script>
+        function canNest(arr1, arr2) {
+        let min1 = Math.min(...arr1);
+        let max1 = Math.max(...arr1);
+        let min2 = Math.min(...arr2);
+        let max2 = Math.max(...arr2);
+        if (min1 > min2 && max1 < max2) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+        console.log(canNest([1, 2, 3, 4], [0, 10])); 
+        console.log(canNest([3, 1], [6, 0])); 
+        console.log(canNest([1, 2, 3], [2, 3])); 
+    </script>
+</body>
+</html>
